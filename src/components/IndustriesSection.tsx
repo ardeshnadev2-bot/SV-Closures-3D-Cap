@@ -342,42 +342,125 @@ export default function IndustriesSection() {
           </div>
 
           {/* Machinery Info Section */}
-          <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center pt-8">
-            {/* Image side */}
-            <div className="relative aspect-[4/3] w-full rounded-2xl overflow-hidden bg-slate-900 border border-slate-200/50 dark:border-slate-800 shadow-md group">
-              <Image
-                src="/images/gallery_crane_molding.jpg"
-                alt="Advanced Production Machinery"
-                fill
-                className="object-cover transition-transform duration-500 group-hover:scale-105"
-                sizes="(max-width: 768px) 100vw, 50vw"
-              />
-            </div>
-            
-            {/* Content side */}
-            <div className="space-y-4">
-              <h3 className="text-2xl font-bold text-text-dark dark:text-white">
+          <div className="space-y-16 pt-12 border-t border-slate-200/10 dark:border-slate-800/30">
+            {/* Styled Heading Section */}
+            <div className="text-center max-w-3xl mx-auto space-y-4">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary-blue/10 text-primary-blue dark:text-accent-blue text-xs font-semibold uppercase tracking-wider">
+                <Settings className="w-3.5 h-3.5" />
+                Production Excellence
+              </div>
+              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-text-dark dark:text-white">
                 Machinery
-              </h3>
-              <p className="text-sm text-text-light dark:text-slate-400 font-light leading-relaxed">
-                Our manufacturing plant is anchored by high-speed, automated injection molding machinery. Equipped with overhead material-handling cranes and precision hot-runner mold tooling, these systems run continuous high-volume production cycles. Every machine is calibrated for micrometer-level precision to ensure zero-defect capping and closure solutions.
+              </h2>
+              <p className="text-sm text-text-light dark:text-slate-400 font-light max-w-xl mx-auto leading-relaxed">
+                We equip our facility with top-tier molding, material handling, and automated assembly systems. Our machinery is optimized for continuous high-volume production with micrometer-level precision.
               </p>
-              <div className="grid grid-cols-2 gap-3 pt-2">
-                <div className="flex items-center gap-2 text-xs font-semibold text-text-dark dark:text-slate-300">
-                  <span className="w-1.5 h-1.5 rounded-full bg-primary-green" />
-                  <span>High-Speed Cycle</span>
+            </div>
+
+            {/* 5-Photo Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+              {/* Photo 1: Crane Molding */}
+              <div className="glass-card rounded-2xl overflow-hidden border border-slate-200/40 dark:border-slate-800/80 bg-white/70 dark:bg-slate-900/60 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col group">
+                <div className="relative aspect-[4/3] w-full overflow-hidden bg-slate-900">
+                  <Image
+                    src="/images/gallery_crane_molding.jpg"
+                    alt="Overhead Crane & Injection Press"
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                  />
                 </div>
-                <div className="flex items-center gap-2 text-xs font-semibold text-text-dark dark:text-slate-300">
-                  <span className="w-1.5 h-1.5 rounded-full bg-primary-green" />
-                  <span>Micrometer Precision</span>
+                <div className="p-5 flex-grow space-y-2">
+                  <h4 className="text-base font-bold text-text-dark dark:text-white group-hover:text-primary-green transition-colors">
+                    Overhead Crane & Injection Press
+                  </h4>
+                  <p className="text-xs text-text-light dark:text-slate-400 font-light leading-relaxed">
+                    Heavy injection press machinery integrated with overhead gantry cranes for seamless mold changes and material feed.
+                  </p>
                 </div>
-                <div className="flex items-center gap-2 text-xs font-semibold text-text-dark dark:text-slate-300">
-                  <span className="w-1.5 h-1.5 rounded-full bg-primary-green" />
-                  <span>Overhead Automation</span>
+              </div>
+
+              {/* Photo 2: Factory Assembly */}
+              <div className="glass-card rounded-2xl overflow-hidden border border-slate-200/40 dark:border-slate-800/80 bg-white/70 dark:bg-slate-900/60 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col group">
+                <div className="relative aspect-[4/3] w-full overflow-hidden bg-slate-900">
+                  <Image
+                    src="/images/gallery_factory_assembly.png"
+                    alt="High-Speed Assembly Conveyors"
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                  />
                 </div>
-                <div className="flex items-center gap-2 text-xs font-semibold text-text-dark dark:text-slate-300">
-                  <span className="w-1.5 h-1.5 rounded-full bg-primary-green" />
-                  <span>Zero-Defect Quality</span>
+                <div className="p-5 flex-grow space-y-2">
+                  <h4 className="text-base font-bold text-text-dark dark:text-white group-hover:text-primary-green transition-colors">
+                    High-Speed Assembly Conveyors
+                  </h4>
+                  <p className="text-xs text-text-light dark:text-slate-400 font-light leading-relaxed">
+                    Continuous-flow conveyor belts transporting molded parts through automated wadding and assembly stages.
+                  </p>
+                </div>
+              </div>
+
+              {/* Photo 3: Packaging Conveyor */}
+              <div className="glass-card rounded-2xl overflow-hidden border border-slate-200/40 dark:border-slate-800/80 bg-white/70 dark:bg-slate-900/60 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col group">
+                <div className="relative aspect-[4/3] w-full overflow-hidden bg-slate-900">
+                  <Image
+                    src="/images/gallery_packaging_conveyor.jpg"
+                    alt="Packaging & Filling Conveyor Lines"
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                  />
+                </div>
+                <div className="p-5 flex-grow space-y-2">
+                  <h4 className="text-base font-bold text-text-dark dark:text-white group-hover:text-primary-green transition-colors">
+                    Packaging & Filling Conveyor Lines
+                  </h4>
+                  <p className="text-xs text-text-light dark:text-slate-400 font-light leading-relaxed">
+                    Strict hygiene-compliant packing stations where closures are counted, bagged, and boxed for final shipment.
+                  </p>
+                </div>
+              </div>
+
+              {/* Photo 4: Factory Overhead */}
+              <div className="glass-card rounded-2xl overflow-hidden border border-slate-200/40 dark:border-slate-800/80 bg-white/70 dark:bg-slate-900/60 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col group md:col-start-1 lg:col-start-auto">
+                <div className="relative aspect-[4/3] w-full overflow-hidden bg-slate-900">
+                  <Image
+                    src="/images/gallery_factory_overhead.jpg"
+                    alt="Optimized Injection Press Layout"
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                  />
+                </div>
+                <div className="p-5 flex-grow space-y-2">
+                  <h4 className="text-base font-bold text-text-dark dark:text-white group-hover:text-primary-green transition-colors">
+                    Optimized Injection Press Layout
+                  </h4>
+                  <p className="text-xs text-text-light dark:text-slate-400 font-light leading-relaxed">
+                    Strategic overhead positioning of injection molding machinery maximizes throughput and material logistics flow.
+                  </p>
+                </div>
+              </div>
+
+              {/* Photo 5: Injection Molding */}
+              <div className="glass-card rounded-2xl overflow-hidden border border-slate-200/40 dark:border-slate-800/80 bg-white/70 dark:bg-slate-900/60 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col group">
+                <div className="relative aspect-[4/3] w-full overflow-hidden bg-slate-900">
+                  <Image
+                    src="/images/gallery_injection_molding.jpg"
+                    alt="High-Performance Injection Presses"
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                  />
+                </div>
+                <div className="p-5 flex-grow space-y-2">
+                  <h4 className="text-base font-bold text-text-dark dark:text-white group-hover:text-primary-green transition-colors">
+                    High-Performance Injection Presses
+                  </h4>
+                  <p className="text-xs text-text-light dark:text-slate-400 font-light leading-relaxed">
+                    State-of-the-art injection press systems ensuring precise control over clamping force, temperature, and cycle times.
+                  </p>
                 </div>
               </div>
             </div>
