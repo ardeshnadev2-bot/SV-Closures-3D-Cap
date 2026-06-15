@@ -177,6 +177,16 @@ const galleryData: GalleryItem[] = [
     icon: Compass,
     aspect: 'aspect-[1.6/1]',
   },
+  {
+    id: 'gal-packaging-conveyor',
+    title: 'Automated Packaging & Filling Line',
+    category: 'factory',
+    categoryLabel: 'Factory Images',
+    image: '/images/gallery_packaging_conveyor.jpg',
+    description: 'Conveyor belt system for filling, sealing, and packaging finished products.',
+    icon: Compass,
+    aspect: 'aspect-[4/3]',
+  },
 ];
 
 const filterCategories = [
