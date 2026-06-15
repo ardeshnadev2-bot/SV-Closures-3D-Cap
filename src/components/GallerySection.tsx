@@ -157,6 +157,26 @@ const galleryData: GalleryItem[] = [
     icon: Ship,
     aspect: 'aspect-[4/3] md:aspect-[3/4]',
   },
+  {
+    id: 'gal-crane-molding',
+    title: 'Overhead Crane & Injection Press',
+    category: 'machinery',
+    categoryLabel: 'Machinery',
+    image: '/images/gallery_crane_molding.jpg',
+    description: 'Heavy-duty overhead crane system supporting modern injection molding machinery.',
+    icon: Settings,
+    aspect: 'aspect-[4/3]',
+  },
+  {
+    id: 'gal-factory-overhead',
+    title: 'Factory Floor Overhead View',
+    category: 'factory',
+    categoryLabel: 'Factory Images',
+    image: '/images/gallery_factory_overhead.jpg',
+    description: 'Panoramic overhead layout of our high-volume automated molding facility.',
+    icon: Compass,
+    aspect: 'aspect-[1.6/1]',
+  },
 ];
 
 const filterCategories = [
