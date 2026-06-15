@@ -340,6 +340,48 @@ export default function IndustriesSection() {
               </div>
             </div>
           </div>
+
+          {/* Machinery Info Section */}
+          <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center pt-8">
+            {/* Image side */}
+            <div className="relative aspect-[4/3] w-full rounded-2xl overflow-hidden bg-slate-900 border border-slate-200/50 dark:border-slate-800 shadow-md group">
+              <Image
+                src="/images/gallery_crane_molding.jpg"
+                alt="Advanced Production Machinery"
+                fill
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+            </div>
+            
+            {/* Content side */}
+            <div className="space-y-4">
+              <h3 className="text-2xl font-bold text-text-dark dark:text-white">
+                Machinery
+              </h3>
+              <p className="text-sm text-text-light dark:text-slate-400 font-light leading-relaxed">
+                Our manufacturing plant is anchored by high-speed, automated injection molding machinery. Equipped with overhead material-handling cranes and precision hot-runner mold tooling, these systems run continuous high-volume production cycles. Every machine is calibrated for micrometer-level precision to ensure zero-defect capping and closure solutions.
+              </p>
+              <div className="grid grid-cols-2 gap-3 pt-2">
+                <div className="flex items-center gap-2 text-xs font-semibold text-text-dark dark:text-slate-300">
+                  <span className="w-1.5 h-1.5 rounded-full bg-primary-green" />
+                  <span>High-Speed Cycle</span>
+                </div>
+                <div className="flex items-center gap-2 text-xs font-semibold text-text-dark dark:text-slate-300">
+                  <span className="w-1.5 h-1.5 rounded-full bg-primary-green" />
+                  <span>Micrometer Precision</span>
+                </div>
+                <div className="flex items-center gap-2 text-xs font-semibold text-text-dark dark:text-slate-300">
+                  <span className="w-1.5 h-1.5 rounded-full bg-primary-green" />
+                  <span>Overhead Automation</span>
+                </div>
+                <div className="flex items-center gap-2 text-xs font-semibold text-text-dark dark:text-slate-300">
+                  <span className="w-1.5 h-1.5 rounded-full bg-primary-green" />
+                  <span>Zero-Defect Quality</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Separator */}
