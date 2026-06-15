@@ -13,7 +13,6 @@ import InfrastructureSection from '@/components/InfrastructureSection';
 import SustainabilitySection from '@/components/SustainabilitySection';
 import GlobalReachMap from '@/components/GlobalReachMap';
 import Certifications from '@/components/Certifications';
-import Testimonials from '@/components/Testimonials';
 import GallerySection from '@/components/GallerySection';
 import ContactSection from '@/components/ContactSection';
 import { Footer } from '@/components/Footer';
@@ -112,7 +111,6 @@ export default function Home() {
               <InfrastructureSection />
               <SustainabilitySection />
               <Certifications />
-              <Testimonials />
               <GallerySection />
               <ContactSection />
             </motion.div>
@@ -129,7 +127,6 @@ export default function Home() {
               <HeroSection />
               <ClienteleSection />
               <ProductRanges />
-              <Testimonials />
               <Certifications />
             </motion.div>
           )}
@@ -144,7 +141,6 @@ export default function Home() {
             >
               <AboutSection />
               <Certifications />
-              <Testimonials />
             </motion.div>
           )}
 
