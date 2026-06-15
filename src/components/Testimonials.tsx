@@ -5,33 +5,21 @@ import { Quote } from 'lucide-react';
 
 interface Testimonial {
   name: string;
-  role: string;
-  company: string;
-  location: string;
   review: string;
 }
 
 const testimonialsData: Testimonial[] = [
   {
     review: "Closures are of superior quality and service provided by you is satisfactory",
-    name: "Rajesh Patel",
-    role: "General Manager (Logistics)",
-    company: "Reliance Industries Ltd",
-    location: "India"
+    name: "****** *****"
   },
   {
     review: "Closure quality is superior and we will like to have long term business with Decap",
-    name: "Amit Sharma",
-    role: "Head of Procurement",
-    company: "Tata Consumer Products",
-    location: "India"
+    name: "**** ******"
   },
   {
     review: "This is to certify that Decap has been supplying tint plugs for the last years to full satisfaction in terms of quality and service",
-    name: "David Harrison",
-    role: "Executive Director",
-    company: "Apex Packaging Systems LLC",
-    location: "USA"
+    name: "***** ********"
   }
 ];
 
@@ -92,12 +80,6 @@ export default function Testimonials() {
               <div className="mt-8 pt-6 border-t border-slate-100 dark:border-slate-800/80 text-center">
                 <span className="block text-sm font-extrabold text-slate-900 dark:text-white">
                   {item.name}
-                </span>
-                <span className="text-[10px] font-semibold text-slate-500 dark:text-slate-400 mt-1.5 block leading-relaxed">
-                  {item.role}, {item.company}
-                </span>
-                <span className="text-[10px] font-bold text-primary-blue dark:text-accent-blue tracking-wider uppercase mt-1 block">
-                  {item.location}
                 </span>
               </div>
             </motion.div>

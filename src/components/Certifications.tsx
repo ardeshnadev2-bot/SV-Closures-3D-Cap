@@ -1,7 +1,6 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import Image from 'next/image';
 import { Award, ShieldAlert, BadgeCheck, FileCheck2 } from 'lucide-react';
 
 const certificationsData = [
@@ -77,54 +76,6 @@ export default function Certifications() {
               </p>
             </motion.div>
           ))}
-        </div>
-
-        {/* Certificate Images Section */}
-        <div className="mt-16">
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                src: '/images/certificate_iso9001.png',
-                alt: 'ISO 9001:2015 Registration Certificate',
-                title: 'ISO 9001:2015 Certification'
-              },
-              {
-                src: '/images/certificate_fda.png',
-                alt: 'US FDA Food Grade Compliance Certificate',
-                title: 'FDA Food Contact Compliance'
-              },
-              {
-                src: '/images/certificate_gmp.png',
-                alt: 'GMP Good Manufacturing Practices Certificate',
-                title: 'GMP Manufacturing Approval'
-              }
-            ].map((cert, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.15, duration: 0.5 }}
-                className="group relative flex flex-col items-center bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden p-4 shadow-md hover:shadow-xl transition-all duration-300"
-              >
-                <div className="relative aspect-[3/4] w-full overflow-hidden rounded-xl border border-slate-100 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-950/20">
-                  <Image
-                    src={cert.src}
-                    alt={cert.alt}
-                    fill
-                    className="object-contain p-2 transition-transform duration-500 group-hover:scale-105"
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                  />
-                </div>
-                <div className="mt-4 text-center">
-                  <h4 className="text-sm font-bold text-text-dark dark:text-white group-hover:text-primary-blue dark:group-hover:text-primary-green transition-colors duration-200">
-                    {cert.title}
-                  </h4>
-                </div>
-              </motion.div>
-            ))}
-          </div>
         </div>
 
       </div>
