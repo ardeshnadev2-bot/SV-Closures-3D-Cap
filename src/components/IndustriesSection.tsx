@@ -357,8 +357,8 @@ export default function IndustriesSection() {
               </p>
             </div>
 
-            {/* 5-Photo Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {/* 4-Photo Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
               {/* Photo 1: Crane Molding */}
               <div className="glass-card rounded-2xl overflow-hidden border border-slate-200/40 dark:border-slate-800/80 bg-white/70 dark:bg-slate-900/60 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col group">
                 <div className="relative aspect-[4/3] w-full overflow-hidden bg-slate-900">
@@ -367,7 +367,7 @@ export default function IndustriesSection() {
                     alt="Overhead Crane & Injection Press"
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
-                    sizes="(max-width: 768px) 100vw, 33vw"
+                    sizes="(max-width: 768px) 100vw, 25vw"
                   />
                 </div>
                 <div className="p-5 flex-grow space-y-2">
@@ -388,7 +388,7 @@ export default function IndustriesSection() {
                     alt="High-Speed Assembly Conveyors"
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
-                    sizes="(max-width: 768px) 100vw, 33vw"
+                    sizes="(max-width: 768px) 100vw, 25vw"
                   />
                 </div>
                 <div className="p-5 flex-grow space-y-2">
@@ -401,36 +401,15 @@ export default function IndustriesSection() {
                 </div>
               </div>
 
-              {/* Photo 3: Packaging Conveyor */}
+              {/* Photo 3: Factory Overhead */}
               <div className="glass-card rounded-2xl overflow-hidden border border-slate-200/40 dark:border-slate-800/80 bg-white/70 dark:bg-slate-900/60 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col group">
-                <div className="relative aspect-[4/3] w-full overflow-hidden bg-slate-900">
-                  <Image
-                    src="/images/gallery_packaging_conveyor.jpg"
-                    alt="Packaging & Filling Conveyor Lines"
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                  />
-                </div>
-                <div className="p-5 flex-grow space-y-2">
-                  <h4 className="text-base font-bold text-text-dark dark:text-white group-hover:text-primary-green transition-colors">
-                    Packaging & Filling Conveyor Lines
-                  </h4>
-                  <p className="text-xs text-text-light dark:text-slate-400 font-light leading-relaxed">
-                    Strict hygiene-compliant packing stations where closures are counted, bagged, and boxed for final shipment.
-                  </p>
-                </div>
-              </div>
-
-              {/* Photo 4: Factory Overhead */}
-              <div className="glass-card rounded-2xl overflow-hidden border border-slate-200/40 dark:border-slate-800/80 bg-white/70 dark:bg-slate-900/60 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col group md:col-start-1 lg:col-start-auto">
                 <div className="relative aspect-[4/3] w-full overflow-hidden bg-slate-900">
                   <Image
                     src="/images/gallery_factory_overhead.jpg"
                     alt="Optimized Injection Press Layout"
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
-                    sizes="(max-width: 768px) 100vw, 33vw"
+                    sizes="(max-width: 768px) 100vw, 25vw"
                   />
                 </div>
                 <div className="p-5 flex-grow space-y-2">
@@ -443,7 +422,7 @@ export default function IndustriesSection() {
                 </div>
               </div>
 
-              {/* Photo 5: Injection Molding */}
+              {/* Photo 4: Injection Molding */}
               <div className="glass-card rounded-2xl overflow-hidden border border-slate-200/40 dark:border-slate-800/80 bg-white/70 dark:bg-slate-900/60 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col group">
                 <div className="relative aspect-[4/3] w-full overflow-hidden bg-slate-900">
                   <Image
@@ -451,7 +430,7 @@ export default function IndustriesSection() {
                     alt="High-Performance Injection Presses"
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
-                    sizes="(max-width: 768px) 100vw, 33vw"
+                    sizes="(max-width: 768px) 100vw, 25vw"
                   />
                 </div>
                 <div className="p-5 flex-grow space-y-2">
