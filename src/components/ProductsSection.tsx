@@ -419,16 +419,22 @@ export default function ProductsSection() {
                 className="group glass-card rounded-2xl overflow-hidden flex flex-col justify-between hover:shadow-2xl hover:shadow-primary-blue/20 dark:hover:shadow-primary-green/20 border border-slate-200/50 dark:border-slate-800/50 hover:border-primary-blue/30 dark:hover:border-primary-green/30"
               >
                 {/* Product Image Area */}
-                <div className="h-60 relative w-full bg-slate-100/50 dark:bg-slate-950/20 flex items-center justify-center p-6 overflow-hidden border-b border-slate-100 dark:border-slate-800/80">
-                  <div className="absolute inset-0 bg-gradient-to-tr from-primary-blue/5 to-primary-green/5 pointer-events-none" />
+                <div className="h-60 relative w-full bg-slate-100/50 dark:bg-slate-950/20 overflow-hidden border-b border-slate-100 dark:border-slate-800/80">
+                  <div className="absolute inset-0 bg-gradient-to-tr from-primary-blue/5 to-primary-green/5 pointer-events-none z-10" />
                   
                   {prod.image && (
-                    <div className="relative w-44 h-44 transition-transform duration-500 group-hover:scale-115">
+                    <div className="relative w-full h-full transition-transform duration-500 group-hover:scale-105">
                       <Image
                         src={prod.image}
                         alt={prod.name}
                         fill
-                        className={`object-contain ${prod.image === '/images/logo.png' ? 'dark:drop-shadow-[0_0_2px_rgba(255,255,255,0.85)]' : ''}`}
+                        className={`transition-all duration-300 ${
+                          prod.image === '/images/logo.png' 
+                            ? 'object-contain p-8 dark:drop-shadow-[0_0_2px_rgba(255,255,255,0.85)]' 
+                            : 'object-cover'
+                        }`}
+                        sizes="(max-width: 768px) 100vw, 33vw"
+                        priority={prod.id === 'sv32' || prod.id === 'sv32c'}
                       />
                     </div>
                   )}
