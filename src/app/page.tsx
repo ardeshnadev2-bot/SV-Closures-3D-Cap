@@ -17,6 +17,8 @@ import GallerySection from '@/components/GallerySection';
 import ContactSection from '@/components/ContactSection';
 import { Footer } from '@/components/Footer';
 import { WhatsAppButton } from '@/components/WhatsAppButton';
+import { Chatbot } from '@/components/Chatbot';
+
 
 type ActiveViewType = 'all' | 'home' | 'about' | 'products' | 'industries' | 'infrastructure' | 'sustainability' | 'global-reach' | 'gallery' | 'contact';
 
@@ -235,6 +237,9 @@ export default function Home() {
 
       {/* WhatsApp Chat Floating Tool */}
       <WhatsAppButton />
+
+      {/* Chatbot Floating Widget */}
+      <Chatbot />
     </>
   );
 }
