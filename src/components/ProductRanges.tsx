@@ -2,7 +2,6 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { Package, Inbox } from 'lucide-react';
 
 export default function ProductRanges() {
   const handleExplore = (category: string) => {
@@ -76,19 +75,16 @@ export default function ProductRanges() {
               </div>
             </div>
 
-            {/* Technical Graphic Placeholder */}
-            <div className="h-64 relative w-full overflow-hidden bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-950 flex flex-col items-center justify-center p-6 border-t border-slate-200 dark:border-slate-800/80">
-              <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808010_1px,transparent_1px),linear-gradient(to_bottom,#80808010_1px,transparent_1px)] bg-[size:20px_20px] opacity-75" />
-              <div className="absolute w-20 h-20 rounded-full bg-primary-green/5 blur-xl group-hover:bg-primary-green/10 transition-all duration-300" />
-              <div className="relative z-10 flex flex-col items-center text-center space-y-2">
-                <div className="p-3.5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/60 dark:border-slate-800/80 shadow-md group-hover:border-primary-green/30 transition-all duration-300 group-hover:scale-105">
-                  <Inbox className="w-8 h-8 text-primary-green" />
-                </div>
-                <span className="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest block font-mono">
-                  Jerry Can Spouts Range
-                </span>
-              </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-50 dark:from-slate-900 via-transparent to-transparent opacity-80" />
+            {/* Pouring Oil Image (Anti-Spill Technology) */}
+            <div className="h-64 relative w-full overflow-hidden bg-slate-50 dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800/80">
+              <Image
+                src="/images/range_oil.png"
+                alt="Industrial Containers & Spouts in use (Anti-Spill Technology)"
+                fill
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
+                sizes="(max-width: 768px) 100vw, 50vw"
+                priority
+              />
             </div>
 
             <div className="p-6 bg-slate-50 border-t border-slate-100">
@@ -141,19 +137,16 @@ export default function ProductRanges() {
               </div>
             </div>
 
-            {/* Technical Graphic Placeholder */}
-            <div className="h-64 relative w-full overflow-hidden bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-950 flex flex-col items-center justify-center p-6 border-t border-slate-200 dark:border-slate-800/80">
-              <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808010_1px,transparent_1px),linear-gradient(to_bottom,#80808010_1px,transparent_1px)] bg-[size:20px_20px] opacity-75" />
-              <div className="absolute w-20 h-20 rounded-full bg-primary-blue/5 blur-xl group-hover:bg-primary-blue/10 transition-all duration-300" />
-              <div className="relative z-10 flex flex-col items-center text-center space-y-2">
-                <div className="p-3.5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/60 dark:border-slate-800/80 shadow-md group-hover:border-primary-blue/30 transition-all duration-300 group-hover:scale-105">
-                  <Package className="w-8 h-8 text-primary-blue" />
-                </div>
-                <span className="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest block font-mono">
-                  Caps & Closures Range
-                </span>
-              </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-50 dark:from-slate-900 via-transparent to-transparent opacity-80" />
+            {/* Lotion Cap Image (Ergonomic Flow) */}
+            <div className="h-64 relative w-full overflow-hidden bg-slate-50 dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800/80">
+              <Image
+                src="/images/range_lotion.png"
+                alt="Precision Caps & Closures in use (Ergonomic Flow)"
+                fill
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
+                sizes="(max-width: 768px) 100vw, 50vw"
+                priority
+              />
             </div>
 
             <div className="p-6 bg-slate-50 border-t border-slate-100">
@@ -161,12 +154,11 @@ export default function ProductRanges() {
                 onClick={() => handleExplore('screw-cap')}
                 className="w-full py-3 rounded-xl bg-white hover:bg-slate-50 border border-slate-200 hover:border-primary-blue text-xs font-semibold text-text-dark tracking-wide transition-all duration-300 cursor-pointer"
               >
-                Explore Cap & Closure Range
+                Explore Caps & Closures Range
               </button>
             </div>
           </motion.div>
         </div>
-
       </div>
     </section>
   );
