@@ -228,18 +228,15 @@ export default function IndustriesSection() {
             
             {/* Card 1: Effortless Use */}
             <div className="group glass-card rounded-3xl overflow-hidden flex flex-col hover:border-primary-blue/25 dark:hover:border-primary-green/25 hover:shadow-2xl hover:shadow-primary-blue/5 transition-all duration-500">
-              <div className="relative aspect-[16/10] w-full overflow-hidden bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-950 flex flex-col items-center justify-center p-6 border-b border-slate-200/60 dark:border-slate-800/80">
-                <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:20px_20px] opacity-75" />
-                <div className="absolute w-24 h-24 rounded-full bg-primary-blue/5 blur-xl group-hover:bg-primary-blue/10 transition-all duration-300" />
-                <div className="relative z-10 p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/60 dark:border-slate-800/80 shadow-md group-hover:scale-105 transition-transform duration-500">
-                  <Fingerprint className="w-10 h-10 text-primary-blue" />
-                </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 to-transparent" />
-                <div className="absolute bottom-6 left-6 text-white">
-                  <span className="px-2.5 py-1 rounded-md bg-primary-blue/80 text-[10px] font-bold tracking-wider uppercase">
-                    Ergonomic Flow
-                  </span>
-                </div>
+              <div className="relative aspect-[16/10] w-full overflow-hidden bg-slate-50 dark:bg-slate-950 border-b border-slate-200/60 dark:border-slate-800/80">
+                <Image
+                  src="/images/range_lotion.png"
+                  alt="Effortless Flipping (Ergonomic Flow)"
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  priority
+                />
               </div>
               <div className="p-6 md:p-8 flex-grow flex flex-col justify-between space-y-4 bg-white/50 dark:bg-slate-900/40">
                 <div className="space-y-2">
@@ -260,18 +257,15 @@ export default function IndustriesSection() {
 
             {/* Card 2: Perfect Pouring */}
             <div className="group glass-card rounded-3xl overflow-hidden flex flex-col hover:border-primary-blue/25 dark:hover:border-primary-green/25 hover:shadow-2xl hover:shadow-primary-blue/5 transition-all duration-500">
-              <div className="relative aspect-[16/10] w-full overflow-hidden bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-950 flex flex-col items-center justify-center p-6 border-b border-slate-200/60 dark:border-slate-800/80">
-                <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:20px_20px] opacity-75" />
-                <div className="absolute w-24 h-24 rounded-full bg-primary-green/5 blur-xl group-hover:bg-primary-green/10 transition-all duration-300" />
-                <div className="relative z-10 p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/60 dark:border-slate-800/80 shadow-md group-hover:scale-105 transition-transform duration-500">
-                  <Droplet className="w-10 h-10 text-primary-green" />
-                </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 to-transparent" />
-                <div className="absolute bottom-6 left-6 text-white">
-                  <span className="px-2.5 py-1 rounded-md bg-primary-green/80 text-[10px] font-bold tracking-wider uppercase">
-                    Anti-Spill Tech
-                  </span>
-                </div>
+              <div className="relative aspect-[16/10] w-full overflow-hidden bg-slate-50 dark:bg-slate-950 border-b border-slate-200/60 dark:border-slate-800/80">
+                <Image
+                  src="/images/range_oil.png"
+                  alt="Perfect Pouring (Anti-Spill Tech)"
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  priority
+                />
               </div>
               <div className="p-6 md:p-8 flex-grow flex flex-col justify-between space-y-4 bg-white/50 dark:bg-slate-900/40">
                 <div className="space-y-2">
