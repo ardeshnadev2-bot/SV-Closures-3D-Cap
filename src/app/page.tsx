@@ -92,7 +92,7 @@ export default function Home() {
       <Navbar />
 
       {/* Main Single Page Layout Sections */}
-      <main className="flex-grow">
+      <main className={`flex-grow transition-all duration-300 ${activeView !== 'home' && activeView !== 'all' ? 'pt-20 lg:pt-24' : ''}`}>
         <AnimatePresence mode="wait">
           {activeView === 'all' && (
             <motion.div

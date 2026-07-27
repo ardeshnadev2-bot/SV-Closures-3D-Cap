@@ -119,7 +119,7 @@ export default function GlobalReachMap() {
   return (
     <section
       id="global-reach"
-      className="py-20 lg:py-28 bg-gradient-to-b from-blue-50/20 via-transparent to-transparent dark:from-slate-950/40 dark:via-slate-900/20 dark:to-transparent text-slate-900 dark:text-white relative overflow-hidden z-10"
+      className="scroll-mt-20 py-10 lg:py-14 bg-gradient-to-b from-blue-50/20 via-transparent to-transparent dark:from-slate-950/40 dark:via-slate-900/20 dark:to-transparent text-slate-900 dark:text-white relative overflow-hidden z-10"
     >
       {/* Decorative background glows */}
       <div className="absolute top-1/4 left-1/4 w-[300px] h-[300px] bg-[#40A4D6]/10 rounded-full blur-[80px] pointer-events-none -z-10" />

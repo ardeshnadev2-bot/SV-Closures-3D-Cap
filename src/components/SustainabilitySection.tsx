@@ -71,7 +71,7 @@ export default function SustainabilitySection() {
   return (
     <section
       id="sustainability"
-      className="py-20 lg:py-28 relative overflow-hidden bg-gradient-to-b from-blue-50/40 via-transparent to-transparent dark:from-slate-950 dark:via-slate-900/60 dark:to-transparent z-10"
+      className="scroll-mt-20 py-10 lg:py-14 relative overflow-hidden bg-gradient-to-b from-blue-50/40 via-transparent to-transparent dark:from-slate-950 dark:via-slate-900/60 dark:to-transparent z-10"
     >
       {/* Decorative background glows */}
       <div className="absolute top-1/4 left-1/4 w-[300px] h-[300px] bg-[#40A4D6]/10 rounded-full blur-[80px] pointer-events-none -z-10" />
@@ -160,7 +160,7 @@ export default function SustainabilitySection() {
          </div>
  
         {/* Separator */}
-        <div className="border-t border-emerald-500/10 dark:border-emerald-950/30 my-20" />
+        <div className="border-t border-emerald-500/10 dark:border-emerald-950/30 my-10" />
 
         {/* Integrated Infrastructure & Clean Operations */}
         <div className="space-y-16">

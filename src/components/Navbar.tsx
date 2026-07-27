@@ -145,7 +145,7 @@ export function Navbar() {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'glass-nav py-3 shadow-sm' : 'bg-transparent py-5'
+        scrolled || activeSection !== 'home' ? 'glass-nav py-3 shadow-sm' : 'bg-transparent py-5'
       }`}
       id="navbar"
     >
