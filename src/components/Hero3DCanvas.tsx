@@ -95,20 +95,22 @@ function AnimatedBottleCap({ config }: { config: CapConfig }) {
 
   // Helix curve for static bottle neck threads
   const helixCurve = useMemo(() => {
-    const points = [];
-    const turns = 2.5;
-    const height = 0.35;
-    const radius = 0.88;
-    const segments = 100;
-    for (let i = 0; i <= segments; i++) {
-      const t = i / segments;
-      const angle = t * Math.PI * 2 * turns;
-      const x = Math.cos(angle) * radius;
-      const z = Math.sin(angle) * radius;
-      const y = (t - 0.5) * height - 0.1;
-      points.push(new THREE.Vector3(x, y, z));
+    class CustomHelixCurve extends THREE.Curve<THREE.Vector3> {
+      constructor() {
+        super();
+      }
+      getPoint(t: number, optionalTarget = new THREE.Vector3()) {
+        const turns = 1.8;
+        const height = 0.25;
+        const radius = 0.88;
+        const angle = t * Math.PI * 2 * turns;
+        const x = Math.cos(angle) * radius;
+        const z = Math.sin(angle) * radius;
+        const y = (t - 0.5) * height - 0.15;
+        return optionalTarget.set(x, y, z);
+      }
     }
-    return new THREE.CatmullRomCurve3(points);
+    return new CustomHelixCurve();
   }, []);
 
   // Rib geometry calculation (60 outer grip ribs for fine realism)
@@ -284,8 +286,8 @@ function AnimatedBottleCap({ config }: { config: CapConfig }) {
 
       {/* 2. TAMPER-EVIDENT COLLAR RING (Adapts to material/color selections) */}
       <mesh position={[0, -0.12, 0]}>
-        <cylinderGeometry args={[0.985, 0.985, 0.08, 48]} />
-        <meshPhysicalMaterial {...capMaterialProps} />
+        <cylinderGeometry args={[0.985, 0.985, 0.08, 48, 1, true]} />
+        <meshPhysicalMaterial {...capMaterialProps} side={THREE.DoubleSide} />
       </mesh>
 
       {/* Broken Bridge Bits (Connecting collar ring) */}
