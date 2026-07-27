@@ -6,8 +6,6 @@ import { motion } from 'framer-motion';
 import { 
   Download, 
   MessageSquare, 
-  ChevronLeft, 
-  ChevronRight,
   Check
 } from 'lucide-react';
 
@@ -75,15 +73,15 @@ const productsData: Product[] = [
   },
   {
     id: 'sv-57-screw',
-    name: 'SV57 (57mm Jerrycan Caps & Closures)',
+    name: 'SV57 (57mm Press-in Pull-Ring Spout Cap)',
     image: '/images/product_57mm_slide1.png',
-    categories: ['screw-cap', 'jerry-can', 'tamper-evident'],
-    material: 'High-Density Polyethylene (HDPE)',
-    closureType: 'Threaded & Snap-On Closures',
-    tamperEvidence: 'Outer Tear-Away Band / Snap Locks',
+    categories: ['spout', 'jerry-can', 'tamper-evident'],
+    material: 'LDPE / High-Density Polyethylene (HDPE)',
+    closureType: 'Press-in Retractable Spout Closures',
+    tamperEvidence: 'Tear-Off Pull Ring + Seal Membrane',
     diameter: '57 mm',
-    application: 'Chemical Jerrycans, Drum Containers',
-    specifications: ['Integrated EPDM/Silicone gasket', 'Vented deflecting system', 'Anti-counterfeit snap locks'],
+    application: 'Chemical Jerrycans, Drum Containers, Industrial Liquids',
+    specifications: ['Press-in drip-free neck', 'Retractable easy-pour spout', 'Leakage-proof seal membrane'],
   },
   {
     id: 'sv-63-crimp',
@@ -113,29 +111,15 @@ const productsData: Product[] = [
 
 function ProductShowcaseCard({ 
   product, 
-  slides, 
   downloadingId, 
   handleDownloadPDF, 
   handleEnquire 
 }: {
   product: Product;
-  slides: string[];
   downloadingId: string | null;
   handleDownloadPDF: (p: Product) => void;
   handleEnquire: (name: string) => void;
 }) {
-  const [slideIndex, setSlideIndex] = useState(0);
-
-  const nextSlide = (e: React.MouseEvent) => {
-    e.stopPropagation();
-    setSlideIndex((prev) => (prev + 1) % slides.length);
-  };
-
-  const prevSlide = (e: React.MouseEvent) => {
-    e.stopPropagation();
-    setSlideIndex((prev) => (prev - 1 + slides.length) % slides.length);
-  };
-
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
@@ -144,55 +128,21 @@ function ProductShowcaseCard({
       transition={{ duration: 0.5 }}
       className="group glass-card rounded-3xl overflow-hidden flex flex-col border border-slate-200/50 dark:border-slate-800/50 hover:border-primary-blue/30 dark:hover:border-primary-green/30 hover:shadow-2xl hover:shadow-primary-blue/15 transition-all duration-300 h-full"
     >
-      {/* Top: Image Slider Box */}
+      {/* Top: Image Header Box */}
       <div className="relative aspect-[4/3] w-full bg-slate-100/50 dark:bg-slate-950/20 overflow-hidden border-b border-slate-200/60 dark:border-slate-800/60">
         <div className="absolute inset-0 bg-gradient-to-tr from-primary-blue/5 to-primary-green/5 pointer-events-none z-10" />
         
-        {/* Slider Images */}
+        {/* Static Image */}
         <div className="relative w-full h-full">
           <Image
-            src={slides[slideIndex]}
-            alt={`${product.name} slide ${slideIndex + 1}`}
+            src={product.image}
+            alt={product.name}
             fill
             className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             priority
           />
         </div>
-        
-        {/* Navigation Arrows (Only show if multiple slides) */}
-        {slides.length > 1 && (
-          <>
-            <button
-              onClick={prevSlide}
-              className="absolute left-3 top-1/2 -translate-y-1/2 z-20 w-8 h-8 rounded-full bg-white/90 dark:bg-slate-900/90 border border-slate-200/60 dark:border-slate-800/60 flex items-center justify-center text-slate-700 dark:text-slate-300 hover:text-primary-blue dark:hover:text-primary-green hover:scale-105 transition-all shadow-md cursor-pointer select-none"
-              aria-label="Previous Slide"
-            >
-              <ChevronLeft className="w-4.5 h-4.5" />
-            </button>
-            <button
-              onClick={nextSlide}
-              className="absolute right-3 top-1/2 -translate-y-1/2 z-20 w-8 h-8 rounded-full bg-white/90 dark:bg-slate-900/90 border border-slate-200/60 dark:border-slate-800/60 flex items-center justify-center text-slate-700 dark:text-slate-300 hover:text-primary-blue dark:hover:text-primary-green hover:scale-105 transition-all shadow-md cursor-pointer select-none"
-              aria-label="Next Slide"
-            >
-              <ChevronRight className="w-4.5 h-4.5" />
-            </button>
-          </>
-        )}
-        
-        {/* Navigation dots (Only show if multiple slides) */}
-        {slides.length > 1 && (
-          <div className="absolute bottom-4 left-0 right-0 z-20 flex justify-center gap-1.5 pointer-events-none">
-            {slides.map((_, idx) => (
-              <div
-                key={idx}
-                className={`w-1.5 h-1.5 rounded-full transition-all duration-300 ${
-                  slideIndex === idx ? 'bg-primary-blue dark:bg-primary-green w-4' : 'bg-slate-300 dark:bg-slate-700'
-                }`}
-              />
-            ))}
-          </div>
-        )}
       </div>
 
       {/* Bottom: Info and Specs Content Area */}
@@ -249,7 +199,7 @@ function ProductShowcaseCard({
           >
             {downloadingId === product.id ? (
               <>
-                <div className="w-3 h-3 border-2 border-primary-blue border-t-transparent rounded-full animate-spin" />
+                <div className="w-3.5 h-3.5 border-2 border-primary-blue border-t-transparent rounded-full animate-spin" />
                 Printing...
               </>
             ) : (
@@ -378,7 +328,7 @@ export default function ProductsSection() {
       <div className="absolute top-1/4 left-1/4 w-[300px] h-[300px] bg-[#40A4D6]/10 rounded-full blur-[80px] pointer-events-none -z-10" />
       <div className="absolute bottom-1/4 right-1/4 w-[350px] h-[350px] bg-[#6EC482]/10 rounded-full blur-[100px] pointer-events-none -z-10" />
 
-      <div className="max-w-\[1360px\] mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
@@ -399,39 +349,6 @@ export default function ProductsSection() {
             <ProductShowcaseCard
               key={prod.id}
               product={prod}
-              slides={prod.id === 'sv-32-spout' ? [
-                '/images/product_32mm_slide1.png',
-                '/images/product_32mm_slide2.png',
-              ] : prod.id === 'sv-40-crimp' ? [
-                '/images/product_40mm_slide1.png',
-                '/images/product_40mm_slide2.png',
-                '/images/product_40mm_slide3.png',
-                '/images/product_40mm_slide4.png',
-              ] : prod.id === 'sv-42-tin' ? [
-                '/images/product_42mm_slide1.png',
-                '/images/product_42mm_slide2.png',
-                '/images/product_42mm_slide3.png',
-                '/images/product_42mm_slide4.png',
-                '/images/product_42mm_slide5.png',
-              ] : prod.id === 'sv-43-spout' ? [
-                '/images/product_43mm_slide1.png',
-              ] : prod.id === 'sv-57-screw' ? [
-                '/images/product_57mm_slide1.png',
-                '/images/product_57mm_slide2.png',
-                '/images/product_57mm_slide3.png',
-                '/images/product_57mm_slide4.png',
-                '/images/product_57mm_slide5.jpg',
-              ] : prod.id === 'sv-63-crimp' ? [
-                '/images/product_63mm_slide1.png',
-                '/images/product_63mm_slide2.png',
-                '/images/product_63mm_slide3.png',
-              ] : [
-                '/images/product_5l_slide1.png',
-                '/images/product_5l_slide2.png',
-                '/images/product_5l_slide3.png',
-                '/images/product_5l_slide4.png',
-                '/images/product_5l_slide5.png',
-              ]}
               downloadingId={downloadingId}
               handleDownloadPDF={handleDownloadPDF}
               handleEnquire={handleEnquire}

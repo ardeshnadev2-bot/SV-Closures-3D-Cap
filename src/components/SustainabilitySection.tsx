@@ -80,7 +80,7 @@ export default function SustainabilitySection() {
       {/* Background Leaves widget */}
       <FallingLeaves />
 
-      <div className="max-w-\[1360px\] mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Row 1: Content Overlay */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-16">

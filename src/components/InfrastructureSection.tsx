@@ -98,7 +98,7 @@ export default function InfrastructureSection() {
       <div className="absolute top-1/4 left-1/4 w-[300px] h-[300px] bg-[#40A4D6]/10 rounded-full blur-[80px] pointer-events-none -z-10" />
       <div className="absolute bottom-1/4 right-1/4 w-[350px] h-[350px] bg-[#6EC482]/10 rounded-full blur-[100px] pointer-events-none -z-10" />
  
-      <div className="max-w-\[1360px\] mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
         
         {/* Banner Block with Overlay Text */}
         <div className="relative rounded-3xl overflow-hidden glass-card shadow-xl border border-slate-200/10">

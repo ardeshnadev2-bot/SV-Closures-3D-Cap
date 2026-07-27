@@ -40,7 +40,7 @@ export function Footer() {
       {/* Background radial highlight */}
       <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-primary-blue/5 dark:bg-primary-green/5 rounded-full blur-[100px] pointer-events-none -z-10" />
 
-      <div className="max-w-\[1360px\] mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Company Brief */}
           <div className="space-y-6">

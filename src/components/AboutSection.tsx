@@ -113,7 +113,7 @@ export default function AboutSection() {
       {/* Decorative cap pattern background overlay (subtle visual details) */}
       <div className="absolute top-0 left-0 right-0 h-40 bg-gradient-to-b from-white to-transparent dark:from-slate-900 pointer-events-none -z-10" />
 
-      <div className="max-w-\[1360px\] mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Core Company Legacy Intro */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center mb-24">

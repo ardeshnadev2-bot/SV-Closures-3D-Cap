@@ -132,7 +132,7 @@ export default function IndustriesSection() {
       <div className="absolute top-1/4 left-1/4 w-[300px] h-[300px] bg-[#40A4D6]/10 rounded-full blur-[80px] pointer-events-none -z-10" />
       <div className="absolute bottom-1/4 right-1/4 w-[350px] h-[350px] bg-[#6EC482]/10 rounded-full blur-[100px] pointer-events-none -z-10" />
 
-      <div className="max-w-\[1360px\] mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Banner Block */}
         <div className="relative rounded-3xl overflow-hidden glass-card mb-20">
@@ -356,7 +356,7 @@ export default function IndustriesSection() {
             </div>
 
             {/* 4-Photo Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-\[1360px\] mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
               {/* Photo 1: Crane Molding */}
               <div className="glass-card rounded-2xl overflow-hidden border border-slate-200/40 dark:border-slate-800/80 bg-white/70 dark:bg-slate-900/60 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col group">
                 <div className="relative aspect-[4/3] w-full overflow-hidden bg-slate-900">
