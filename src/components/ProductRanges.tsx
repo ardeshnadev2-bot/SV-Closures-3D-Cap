@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { Package, Inbox } from 'lucide-react';
 
 export default function ProductRanges() {
   const handleExplore = (category: string) => {
@@ -21,7 +22,7 @@ export default function ProductRanges() {
       <div className="absolute top-1/4 left-1/4 w-[300px] h-[300px] bg-[#40A4D6]/10 rounded-full blur-[80px] pointer-events-none -z-10" />
       <div className="absolute bottom-1/4 right-1/4 w-[350px] h-[350px] bg-[#6EC482]/10 rounded-full blur-[100px] pointer-events-none -z-10" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-\[1360px\] mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12 space-y-4">
@@ -75,16 +76,19 @@ export default function ProductRanges() {
               </div>
             </div>
 
-            {/* Image display */}
-            <div className="h-64 relative w-full overflow-hidden bg-slate-50 border-t border-slate-200">
-              <Image
-                src="/images/products_jerrycans_spouts_v2.png"
-                alt="Industrial Containers & Spouts"
-                fill
-                className="object-cover transition-transform duration-700 group-hover:scale-105"
-                sizes="(max-width: 768px) 100vw, 50vw"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent opacity-85" />
+            {/* Technical Graphic Placeholder */}
+            <div className="h-64 relative w-full overflow-hidden bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-950 flex flex-col items-center justify-center p-6 border-t border-slate-200 dark:border-slate-800/80">
+              <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808010_1px,transparent_1px),linear-gradient(to_bottom,#80808010_1px,transparent_1px)] bg-[size:20px_20px] opacity-75" />
+              <div className="absolute w-20 h-20 rounded-full bg-primary-green/5 blur-xl group-hover:bg-primary-green/10 transition-all duration-300" />
+              <div className="relative z-10 flex flex-col items-center text-center space-y-2">
+                <div className="p-3.5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/60 dark:border-slate-800/80 shadow-md group-hover:border-primary-green/30 transition-all duration-300 group-hover:scale-105">
+                  <Inbox className="w-8 h-8 text-primary-green" />
+                </div>
+                <span className="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest block font-mono">
+                  Jerry Can Spouts Range
+                </span>
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-50 dark:from-slate-900 via-transparent to-transparent opacity-80" />
             </div>
 
             <div className="p-6 bg-slate-50 border-t border-slate-100">
@@ -137,16 +141,19 @@ export default function ProductRanges() {
               </div>
             </div>
 
-            {/* Image display */}
-            <div className="h-64 relative w-full overflow-hidden bg-slate-50 border-t border-slate-200">
-              <Image
-                src="/images/products_caps_closures_v2.png"
-                alt="Precision Caps & Closures"
-                fill
-                className="object-cover transition-transform duration-700 group-hover:scale-105"
-                sizes="(max-width: 768px) 100vw, 50vw"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent opacity-85" />
+            {/* Technical Graphic Placeholder */}
+            <div className="h-64 relative w-full overflow-hidden bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-950 flex flex-col items-center justify-center p-6 border-t border-slate-200 dark:border-slate-800/80">
+              <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808010_1px,transparent_1px),linear-gradient(to_bottom,#80808010_1px,transparent_1px)] bg-[size:20px_20px] opacity-75" />
+              <div className="absolute w-20 h-20 rounded-full bg-primary-blue/5 blur-xl group-hover:bg-primary-blue/10 transition-all duration-300" />
+              <div className="relative z-10 flex flex-col items-center text-center space-y-2">
+                <div className="p-3.5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/60 dark:border-slate-800/80 shadow-md group-hover:border-primary-blue/30 transition-all duration-300 group-hover:scale-105">
+                  <Package className="w-8 h-8 text-primary-blue" />
+                </div>
+                <span className="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest block font-mono">
+                  Caps & Closures Range
+                </span>
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-50 dark:from-slate-900 via-transparent to-transparent opacity-80" />
             </div>
 
             <div className="p-6 bg-slate-50 border-t border-slate-100">

@@ -132,7 +132,7 @@ export default function IndustriesSection() {
       <div className="absolute top-1/4 left-1/4 w-[300px] h-[300px] bg-[#40A4D6]/10 rounded-full blur-[80px] pointer-events-none -z-10" />
       <div className="absolute bottom-1/4 right-1/4 w-[350px] h-[350px] bg-[#6EC482]/10 rounded-full blur-[100px] pointer-events-none -z-10" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-\[1360px\] mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Banner Block */}
         <div className="relative rounded-3xl overflow-hidden glass-card mb-20">
@@ -228,13 +228,12 @@ export default function IndustriesSection() {
             
             {/* Card 1: Effortless Use */}
             <div className="group glass-card rounded-3xl overflow-hidden flex flex-col hover:border-primary-blue/25 dark:hover:border-primary-green/25 hover:shadow-2xl hover:shadow-primary-blue/5 transition-all duration-500">
-              <div className="relative aspect-[16/10] w-full overflow-hidden">
-                <Image
-                  src="/images/closure_ease.png"
-                  alt="Effortless open closure design"
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
-                />
+              <div className="relative aspect-[16/10] w-full overflow-hidden bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-950 flex flex-col items-center justify-center p-6 border-b border-slate-200/60 dark:border-slate-800/80">
+                <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:20px_20px] opacity-75" />
+                <div className="absolute w-24 h-24 rounded-full bg-primary-blue/5 blur-xl group-hover:bg-primary-blue/10 transition-all duration-300" />
+                <div className="relative z-10 p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/60 dark:border-slate-800/80 shadow-md group-hover:scale-105 transition-transform duration-500">
+                  <Fingerprint className="w-10 h-10 text-primary-blue" />
+                </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 to-transparent" />
                 <div className="absolute bottom-6 left-6 text-white">
                   <span className="px-2.5 py-1 rounded-md bg-primary-blue/80 text-[10px] font-bold tracking-wider uppercase">
@@ -261,13 +260,12 @@ export default function IndustriesSection() {
 
             {/* Card 2: Perfect Pouring */}
             <div className="group glass-card rounded-3xl overflow-hidden flex flex-col hover:border-primary-blue/25 dark:hover:border-primary-green/25 hover:shadow-2xl hover:shadow-primary-blue/5 transition-all duration-500">
-              <div className="relative aspect-[16/10] w-full overflow-hidden">
-                <Image
-                  src="/images/closure_convenience.png"
-                  alt="Convenient anti-drip pouring cap"
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
-                />
+              <div className="relative aspect-[16/10] w-full overflow-hidden bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-950 flex flex-col items-center justify-center p-6 border-b border-slate-200/60 dark:border-slate-800/80">
+                <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:20px_20px] opacity-75" />
+                <div className="absolute w-24 h-24 rounded-full bg-primary-green/5 blur-xl group-hover:bg-primary-green/10 transition-all duration-300" />
+                <div className="relative z-10 p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/60 dark:border-slate-800/80 shadow-md group-hover:scale-105 transition-transform duration-500">
+                  <Droplet className="w-10 h-10 text-primary-green" />
+                </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 to-transparent" />
                 <div className="absolute bottom-6 left-6 text-white">
                   <span className="px-2.5 py-1 rounded-md bg-primary-green/80 text-[10px] font-bold tracking-wider uppercase">
@@ -309,7 +307,7 @@ export default function IndustriesSection() {
             </p>
           </div>
 
-          <div className="relative group max-w-4xl mx-auto w-full">
+          <div className="relative group max-w-5xl mx-auto w-full">
             {/* Decorative background glow */}
             <div className="absolute -inset-1.5 bg-gradient-to-r from-primary-blue to-primary-green rounded-2xl blur opacity-30 group-hover:opacity-50 transition duration-1000 group-hover:duration-200" />
             
@@ -358,7 +356,7 @@ export default function IndustriesSection() {
             </div>
 
             {/* 4-Photo Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-\[1360px\] mx-auto">
               {/* Photo 1: Crane Molding */}
               <div className="glass-card rounded-2xl overflow-hidden border border-slate-200/40 dark:border-slate-800/80 bg-white/70 dark:bg-slate-900/60 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col group">
                 <div className="relative aspect-[4/3] w-full overflow-hidden bg-slate-900">

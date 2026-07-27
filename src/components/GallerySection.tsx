@@ -216,7 +216,7 @@ export default function GallerySection() {
       <div className="absolute top-1/4 left-1/4 w-[300px] h-[300px] bg-[#40A4D6]/10 rounded-full blur-[80px] pointer-events-none -z-10" />
       <div className="absolute bottom-1/4 right-1/4 w-[350px] h-[350px] bg-[#6EC482]/10 rounded-full blur-[100px] pointer-events-none -z-10" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-\[1360px\] mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12 space-y-4">
@@ -267,14 +267,20 @@ export default function GallerySection() {
               >
                 {/* Image panel */}
                 <div className="relative w-full h-full min-h-[220px] bg-slate-100 dark:bg-slate-950 flex items-center justify-center p-6 overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity z-10" />
-                  
-                  <Image
-                    src={item.image}
-                    alt={item.title}
-                    fill
-                    className="object-contain p-6 transition-transform duration-500 group-hover:scale-105"
-                  />
+                  {/* High-Tech Technical Blueprint placeholder */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-slate-100 to-slate-200/50 dark:from-slate-950 dark:to-slate-900 flex flex-col items-center justify-center p-6 select-none transition-transform duration-500 group-hover:scale-105">
+                    {/* Abstract technical blueprint grid lines */}
+                    <div className="absolute inset-0 bg-[linear-gradient(to_right,#8080800c_1px,transparent_1px),linear-gradient(to_bottom,#8080800c_1px,transparent_1px)] bg-[size:20px_20px] opacity-75" />
+                    
+                    {/* Glowing circle accent */}
+                    <div className="absolute w-24 h-24 rounded-full bg-primary-blue/5 dark:bg-primary-green/5 blur-xl group-hover:bg-primary-blue/10 dark:group-hover:bg-primary-green/10 transition-colors duration-300" />
+                    
+                    <div className="relative z-10 flex flex-col items-center text-center space-y-2">
+                      <div className="p-3.5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/60 dark:border-slate-800/80 shadow-md group-hover:border-primary-blue/30 dark:group-hover:border-primary-green/30 transition-all duration-300 group-hover:scale-105 group-hover:shadow-lg">
+                        <item.icon className="w-8 h-8 text-primary-blue dark:text-primary-green" />
+                      </div>
+                    </div>
+                  </div>
 
                   {/* Icon wrap */}
                   <div className="absolute top-4 left-4 z-20 w-8 h-8 rounded-lg bg-slate-950/80 border border-slate-800 flex items-center justify-center text-slate-300">
@@ -322,12 +328,14 @@ export default function GallerySection() {
                 onClick={(e) => e.stopPropagation()}
               >
                 <div className="h-[300px] sm:h-[450px] w-full relative bg-slate-950 flex items-center justify-center p-8 border-b border-slate-800">
-                  <Image
-                    src={selectedImage.image}
-                    alt={selectedImage.title}
-                    fill
-                    className="object-contain p-8"
-                  />
+                  {/* Lightbox technical placeholder */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-slate-950 to-slate-900 flex flex-col items-center justify-center p-8 select-none">
+                    <div className="absolute inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:24px_24px] opacity-75" />
+                    <div className="absolute w-36 h-36 rounded-full bg-primary-blue/5 dark:bg-primary-green/5 blur-2xl" />
+                    <div className="relative z-10 p-5 rounded-3xl bg-slate-900 border border-slate-800 shadow-xl">
+                      <selectedImage.icon className="w-12 h-12 text-primary-green" />
+                    </div>
+                  </div>
                 </div>
                 <div className="p-6 space-y-2.5">
                   <span className="inline-block text-[10px] uppercase font-bold tracking-wider text-primary-green bg-emerald-500/10 px-2 py-0.5 rounded">
