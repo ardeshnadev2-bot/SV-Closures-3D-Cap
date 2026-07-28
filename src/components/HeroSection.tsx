@@ -1,19 +1,9 @@
 'use client';
 
-import dynamic from 'next/dynamic';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { ShieldCheck, ArrowRight, Activity, Users, Globe2, Award } from 'lucide-react';
 import { useEffect, useState } from 'react';
-
-// Dynamically import the 3D Canvas with SSR disabled to prevent WebGL compilation errors on server
-const Hero3DCanvas = dynamic(() => import('./Hero3DCanvas'), {
-  ssr: false,
-  loading: () => (
-    <div className="w-full h-full min-h-[400px] flex items-center justify-center relative">
-      <div className="w-20 h-20 rounded-full border-4 border-primary-blue/30 border-t-primary-blue animate-spin" />
-    </div>
-  ),
-});
 
 // Dynamic stat counter utility
 function AnimatedCounter({ value, duration = 2 }: { value: string; duration?: number }) {
@@ -72,7 +62,7 @@ export default function HeroSection() {
       className="relative min-h-screen flex items-center pt-24 pb-12 lg:pt-32 lg:pb-20 overflow-hidden bg-gradient-to-b from-blue-50/20 via-transparent to-transparent dark:from-slate-950/40 dark:via-slate-900/20 dark:to-transparent z-10"
     >
       {/* Cap Pattern Overlay background */}
-      <div className="absolute inset-0 cap-pattern-overlay opacity-30 pointer-events-none -z-20" />
+      <div className="absolute inset-0 cap-pattern-overlay opacity-10 pointer-events-none -z-20" />
 
       {/* Mouse following glow spotlight */}
       <div
@@ -95,7 +85,7 @@ export default function HeroSection() {
             repeat: Infinity,
             ease: "easeInOut"
           }}
-          className="absolute top-[20%] right-[10%] opacity-20 dark:opacity-30 text-primary-blue"
+          className="absolute top-[20%] right-[10%] opacity-[0.06] dark:opacity-[0.1] text-primary-blue"
         >
           <svg width="45" height="45" viewBox="0 0 100 100" fill="currentColor">
             <circle cx="50" cy="50" r="45" fill="none" stroke="currentColor" strokeWidth="8" strokeDasharray="6,4" />
@@ -113,7 +103,7 @@ export default function HeroSection() {
             repeat: Infinity,
             ease: "easeInOut"
           }}
-          className="absolute bottom-[25%] left-[8%] opacity-15 dark:opacity-20 text-primary-green"
+          className="absolute bottom-[25%] left-[8%] opacity-[0.05] dark:opacity-[0.08] text-primary-green"
         >
           <svg width="55" height="55" viewBox="0 0 100 100" fill="currentColor">
             <circle cx="50" cy="50" r="45" fill="none" stroke="currentColor" strokeWidth="10" strokeDasharray="8,6" />
@@ -235,15 +225,39 @@ export default function HeroSection() {
             </motion.div>
           </div>
 
-          {/* 3D Model Floating Canvas Block */}
-          <div className="lg:col-span-5 w-full h-[400px] lg:h-full flex items-center justify-center relative">
+          {/* Borderless Hero Composition Block */}
+          <div className="lg:col-span-5 w-full flex items-center justify-center relative py-6 lg:py-10">
             <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
+              initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="w-full h-full relative"
+              className="relative w-full max-w-[480px] lg:max-w-[560px] aspect-[5/4] flex items-center justify-center select-none"
             >
-              <Hero3DCanvas />
+              {/* Subtle background glow under the closures */}
+              <div className="absolute inset-0 bg-gradient-to-tr from-primary-blue/15 via-primary-green/8 to-transparent rounded-full blur-[90px] -z-10" />
+
+              {/* Floating Product Group Image */}
+              <motion.div
+                animate={{
+                  y: [-12, 12, -12],
+                  rotate: [-1, 1, -1],
+                }}
+                transition={{
+                  duration: 6,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+                className="w-full h-full flex items-center justify-center"
+              >
+                <Image
+                  src="/images/flip_top_closures_hero.png"
+                  alt="Premium Plastic Flip-Top Closures"
+                  width={600}
+                  height={480}
+                  priority
+                  className="w-full h-full object-contain filter drop-shadow-[0_25px_45px_rgba(0,0,0,0.16)] drop-shadow-[0_10px_20px_rgba(0,0,0,0.1)]"
+                />
+              </motion.div>
             </motion.div>
           </div>
 
